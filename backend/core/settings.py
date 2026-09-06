@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
-CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
+CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:5173').split(',')
 
 
 # Application definition
@@ -144,3 +144,4 @@ REST_FRAMEWORK = {
 
 AUTH_USER_MODEL = 'knovault.User'
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+CORS_ALLOW_ALL_ORIGINS = True  # TEMP
